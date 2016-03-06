@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Em>
+	<bean id="b" class="com.jason.em.B"></bean>
+	<bean id="c" class="com.jason.em.C"></bean>
+	<bean id="a" class="com.jason.em.A">
+		<property name="partner" ref="b"></property>
+		<property name="desc" value="自我介绍"></property>
+	</bean>
+
+	<aop>
+		<aspect class="com.jason.em.C">    <!-- 切面 -->
+			<pointcut class="com.jason.em.B" method="say"></pointcut><!-- 切点 -->
+			<before method="hellobefore"></before><!-- 通知 -->
+			<after method="helloafter"></after><!-- 通知 -->
+		</aspect>
+		<aspect class="com.jason.em.C">    <!-- 切面 -->
+			<pointcut class="com.jason.em.B" method="walk"></pointcut><!-- 切点 -->
+			<before method="hellobefore"></before><!-- 通知 -->
+			<after method="helloafter"></after><!-- 通知 -->
+		</aspect>
+	</aop>
+
+</Em>	
