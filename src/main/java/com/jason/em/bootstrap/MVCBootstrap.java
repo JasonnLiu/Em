@@ -52,7 +52,7 @@ public class MVCBootstrap implements Bootstrap {
 				String annotation = method[i].getAnnotation(
 						RequestMapping.class).value();
 				em.getRouters().addRoute(annotation, method[i], obj);
-
+ 
 			}
 
 		}
