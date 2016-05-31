@@ -30,7 +30,7 @@ public class AopService {
 	
 
 	public void init() {
-		File f = new File("src/main/java/META-INF/config.xml");
+		File f = new File("src/main/java/config.xml");
 		SAXReader reader = new SAXReader();
 		try {
 			Document doc = reader.read(f);
