@@ -1,7 +1,6 @@
 package com.jason.em;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -28,7 +27,7 @@ public class EmFilter implements Filter {
 
 	public void doFilter(ServletRequest servletRequest,
 			ServletResponse servletResponse, FilterChain filterChain)
-			throws IOException, ServletException {
+			throws  ServletException, IOException {
 
 		Request request = new Request((HttpServletRequest) servletRequest);
 		Response response = new Response((HttpServletResponse) servletResponse);

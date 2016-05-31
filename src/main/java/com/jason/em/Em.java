@@ -5,8 +5,8 @@ import java.lang.reflect.Method;
 import com.jason.em.config.ConfigLoader;
 import com.jason.em.ioc.Container;
 import com.jason.em.ioc.impl.EmIoC;
-import com.jason.em.render.JspRender;
-import com.jason.em.render.Render;
+import com.jason.em.renderer.JspRender;
+import com.jason.em.renderer.Render;
 import com.jason.em.route.Route;
 import com.jason.em.route.Routers;
 
