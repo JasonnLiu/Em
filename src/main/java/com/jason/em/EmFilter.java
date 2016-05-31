@@ -12,6 +12,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.jason.em.bootstrap.Bootstrap;
 import com.jason.em.route.Route;
 import com.jason.em.route.RouteMatcher;
 import com.jason.em.servlet.wrapper.Request;
@@ -54,8 +55,11 @@ public class EmFilter implements Filter {
 	public void init(FilterConfig filterConfig) throws ServletException {
 		Em em = Em.Me();
 		if (!em.isInit()) {
-			String bootstrap = filterConfig.getInitParameter("bootstrap");
+			//String bootstrap = filterConfig.getInitParameter("bootstrap");
+			String bootstrap = "com.jason.em.bootstrap.IoCBoostrap";
 			Bootstrap b = getBootstrap(bootstrap);
+			this.servletContext = filterConfig.getServletContext();
+			b.setContext(servletContext);
 			b.init(em);
 			rm.setRoutes(em.getRouters().getList());
 			this.servletContext = filterConfig.getServletContext();
