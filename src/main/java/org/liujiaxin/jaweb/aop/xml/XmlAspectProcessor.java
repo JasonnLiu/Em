@@ -1,4 +1,4 @@
-package org.liujiaxin.jaweb.aop;
+package org.liujiaxin.jaweb.aop.xml;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -8,6 +8,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.liujiaxin.jaweb.aop.AbstractAspectProcessor;
 import org.liujiaxin.jaweb.ioc.SimpleBeanFactory;
 import org.liujiaxin.jaweb.util.ReflectUtil;
 
